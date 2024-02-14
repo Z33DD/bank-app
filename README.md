@@ -2,23 +2,34 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
-
+First, run the [PocketBase](https://pocketbase.io/) server for authentication and the database:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+./pocketbase serve
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Finally, run the development server:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+
+And open [PocketBase admin panel](http://localhost:8090/_/) to set custom values for the balances or create a new user.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+[Note that PocketBase uses SQLite as the database](https://pocketbase.io/docs/collections/).
+
+## Test Credentials
+
+### Application
+- email: johndoe@example.com
+- password: navigation
+
+### PocketBase Admin
+- email: admin@example.com
+- password: msuSKtH0KcU8REPjf6Q27CrddKHvqjqO
 
 ## Learn More
 
